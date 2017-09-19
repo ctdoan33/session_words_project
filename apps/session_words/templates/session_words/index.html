@@ -10,11 +10,11 @@
 </head>
 <body>
     <form id="addform" action="/session_words/add_word" method="post">
-    {%csrf_token%}
+        {%csrf_token%}
         <h1>Add a new word</h1>
         <input id="newword" type="text" name="word">
         <p>Choose color</p>
-        <input type="radio" class="radio" name="color" value="red">Red
+        <input type="radio" class="radio" name="color" value="red" checked>Red
         <br>
         <input type="radio" class="radio" name="color" value="green">Green
         <br>

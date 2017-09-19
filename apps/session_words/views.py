@@ -8,6 +8,8 @@ def index(request):
         request.session["words"]=[]
     return render(request, "session_words/index.html")
 def add_word(request):
+    if len(request.POST["word"])<1:
+        return redirect("/")
     if "font" in request.POST:
         font="2em"
     else:
